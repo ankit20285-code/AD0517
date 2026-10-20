@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ankit × Divya - One Year of Forever</title>
+  <title>Ankit × Divya - Two Years of Forever</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
   <script src="/_sdk/element_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
@@ -423,6 +423,182 @@
             line-height: 1.6;
         }
 
+        /* ===== Collapsible timeline ===== */
+        .timeline-clip {
+            width: calc(100% + 80px);
+            max-width: 880px;
+            margin: -20px -40px 0;
+            padding: 20px 40px 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            transition: max-height 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-clip.collapsed {
+            max-height: 560px;
+            -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+        }
+
+        .timeline-section.is-collapsed {
+            min-height: auto;
+        }
+
+        .timeline-toggle {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .timeline-toggle-hint {
+            font-size: 0.95rem;
+            color: #6f42c1;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+
+        .timeline-toggle .btn-romantic .chevron {
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .timeline-toggle .btn-romantic.open .chevron {
+            transform: rotate(180deg);
+        }
+
+        /* ===== Storybook (PDF download) section ===== */
+        .storybook-section {
+            background: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 100%);
+            padding: 80px 20px;
+            min-height: auto;
+        }
+
+        .storybook-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #d63384;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .storybook-card {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 40px 45px;
+            box-shadow: 0 15px 40px rgba(214, 51, 132, 0.15);
+            backdrop-filter: blur(10px);
+            box-sizing: border-box;
+        }
+
+        .storybook-cover {
+            flex: 0 0 190px;
+            height: 260px;
+            border-radius: 6px 14px 14px 6px;
+            background: linear-gradient(145deg, #ff69b4 0%, #d63384 50%, #8a2be2 100%);
+            border-left: 12px solid rgba(111, 66, 193, 0.85);
+            box-shadow: 12px 14px 30px rgba(111, 66, 193, 0.35), inset -4px 0 8px rgba(255, 255, 255, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            transform: rotate(-3deg);
+            transition: transform 0.4s ease;
+        }
+
+        .storybook-card:hover .storybook-cover {
+            transform: rotate(0deg) translateY(-6px);
+        }
+
+        .storybook-cover-icon {
+            font-size: 2.6rem;
+            margin-bottom: 14px;
+            animation: heartbeat 2s infinite;
+        }
+
+        .storybook-cover-names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.7rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .storybook-cover-sub {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 12px;
+            opacity: 0.9;
+        }
+
+        .storybook-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .storybook-info h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #6f42c1;
+            margin: 0 0 12px;
+        }
+
+        .storybook-info p {
+            color: #495057;
+            line-height: 1.7;
+            margin: 0 0 8px;
+        }
+
+        .storybook-info .storybook-note {
+            font-size: 0.85rem;
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        .storybook-info .btn-romantic {
+            display: inline-block;
+            text-decoration: none;
+            margin: 14px 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-clip {
+                width: calc(100% + 40px);
+                margin: -20px -20px 0;
+                padding: 20px 20px 0;
+            }
+
+            .timeline-clip.collapsed {
+                max-height: 480px;
+            }
+
+            .storybook-card {
+                flex-direction: column;
+                padding: 30px 25px;
+                gap: 35px;
+                text-align: center;
+            }
+
+            .storybook-info {
+                text-align: center;
+            }
+
+            .storybook-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .timeline-clip { transition: none; }
+        }
+
         .gallery-section {
             background: linear-gradient(135deg, #e6f3ff 0%, #ffeef8 100%);
             padding: 80px 20px;
@@ -500,6 +676,186 @@
             color: #6c757d;
             text-align: center;
             font-size: 0.9rem;
+        }
+
+        /* ===== AD Gallery popup ===== */
+        .ad-gallery-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(40, 10, 60, 0.75);
+            backdrop-filter: blur(6px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 10000;
+        }
+
+        .ad-gallery-overlay.open {
+            display: flex;
+            animation: fadeInUp 0.4s ease-out;
+        }
+
+        .ad-gallery-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1000px;
+            max-height: 88vh;
+            background: linear-gradient(135deg, #ffeef8, #f0e6ff);
+            border: 3px solid #ff69b4;
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(255, 105, 180, 0.35);
+            padding: 30px 30px 20px;
+            box-sizing: border-box;
+        }
+
+        .ad-gallery-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff69b4, #d63384);
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(214, 51, 132, 0.4);
+            transition: transform 0.3s ease;
+            z-index: 2;
+        }
+
+        .ad-gallery-close:hover {
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .ad-gallery-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: #d63384;
+            text-align: center;
+            margin: 0 40px 4px;
+        }
+
+        .ad-gallery-sub {
+            text-align: center;
+            color: #6f42c1;
+            font-style: italic;
+            margin: 0 0 18px;
+        }
+
+        .ad-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 20px;
+            overflow-y: auto;
+            padding: 8px 6px 14px;
+        }
+
+        .ad-gallery-item {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ad-gallery-item:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 16px 32px rgba(255, 105, 180, 0.3);
+        }
+
+        .ad-gallery-item img {
+            display: block;
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .ad-gallery-item-caption {
+            font-size: 0.8rem;
+            font-style: italic;
+            color: #6c757d;
+            text-align: center;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        .ad-gallery-soon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 210px;
+            border: 2px dashed #ff69b4;
+            border-radius: 10px;
+            color: #d63384;
+            font-style: italic;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .ad-gallery-soon span {
+            font-size: 2.4rem;
+            margin-bottom: 6px;
+        }
+
+        .ad-lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 10001;
+            cursor: zoom-out;
+        }
+
+        .ad-lightbox.open {
+            display: flex;
+        }
+
+        .ad-lightbox img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 0 40px rgba(255, 105, 180, 0.5);
+        }
+
+        .ad-lightbox-caption {
+            color: white;
+            font-style: italic;
+            text-align: center;
+            margin-top: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .ad-gallery-card {
+                padding: 24px 16px 14px;
+                max-height: 92vh;
+            }
+
+            .ad-gallery-title {
+                font-size: 1.8rem;
+            }
+
+            .ad-gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .ad-gallery-item img {
+                height: 130px;
+            }
         }
 
         .chat-section {
@@ -1062,7 +1418,7 @@
     <div class="magic-orb" style="top: 60%; right: 20%; animation-delay: 2s;"></div>
     <div class="magic-orb" style="top: 40%; left: 70%; animation-delay: 4s;"></div>
    </div>
-   <h1 class="main-title" id="coupleNames">Ankit × Divya — One Year of Forever ✨</h1>
+   <h1 class="main-title" id="coupleNames">Ankit × Divya — Two Years of Forever ✨</h1>
    <div class="featured-picture-section">
             <div class="featured-picture-frame">
                 <img id="featuredPicture" src="images/IMG_20250929_151547_779.jpg" alt="Cute US" onerror="showPicturePlaceholder(this)">
@@ -1079,8 +1435,9 @@
    <div><button class="btn-romantic" onclick="scrollToSection('timeline')">Enter Our World 💞</button> <button class="btn-romantic" onclick="playOurSong()">Listen to Our Song 🎶</button>
    </div>
   </section><!-- Timeline Section -->
-  <section id="timeline" class="section timeline-section">
+  <section id="timeline" class="section timeline-section is-collapsed">
    <h2 class="timeline-title">Our Love Story Timeline</h2>
+   <div class="timeline-clip collapsed" id="timelineClip">
    <div class="timeline">
     <div class="timeline-item">
      <div class="timeline-dot"></div>
@@ -1348,6 +1705,11 @@
      </div>
     </div>
    </div>
+   </div>
+   <div class="timeline-toggle">
+    <div class="timeline-toggle-hint" id="timelineHint"></div>
+    <button class="btn-romantic" id="timelineToggle" onclick="toggleTimeline()" aria-expanded="false" aria-controls="timelineClip"><span id="timelineToggleLabel">Explore Timeline</span> <span class="chevron">▼</span></button>
+   </div>
   </section><!-- Photo Gallery Section -->
   <section id="gallery" class="section gallery-section">
    <h2 class="gallery-title">Our Memory Gallery</h2>
@@ -1408,7 +1770,7 @@
       September 27, 2025 (Pandal Hopping)
      </div>
     </div>
-    <div class="photo-card">
+    <div class="photo-card" onclick="openAdGallery()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAdGallery();}">
      <div class="photo-placeholder">
       <p>📸</p>
      </div>
@@ -1602,8 +1964,7 @@
       From His Heart
      </div>
      <div class="letter-preview" id="loveLetter">
-      Heyyy, DivyA... Its been a year together 🤭
-        It also started from June 22nd, 2024, Didn't expect that this could get real with you. The day I saw you, You looked so pretty, so charming.....
+ <!-- WRITE YOUR LETTER  -->
      </div>
     </div>
     <div class="letter-envelope" onclick="openLetter('hers')">
@@ -1614,11 +1975,29 @@
       From Her Heart
      </div>
      <div class="letter-preview">
-        I loveee youuu soo soo sooo muchhh Ankitttt❣🤧... kitneeee sweettt pyareee considerate babyy ho mereeee🫠🫠🌟 i wanna be with youuu hameshaa forever 😭❣ neverr thinkkk anything negativeee about yourself!....
+<!-- WRITE YOUR LETTER  -->
      </div>
     </div>
    </div>
-  </section><!-- Countdown Section -->
+  </section>
+  <!-- Storybook (PDF) Section -->
+  <section id="storybook" class="section storybook-section">
+   <h2 class="storybook-title">Our Story, Bound in a Book</h2>
+   <div class="storybook-card">
+    <div class="storybook-cover">
+     <div class="storybook-cover-icon">📖</div>
+     <div class="storybook-cover-names">Ankit × Divya</div>
+     <div class="storybook-cover-sub">One  of Forever</div>
+    </div>
+    <div class="storybook-info">
+     <h3>Every chapter, in one place</h3>
+     <p>All our stories, written down just the way we lived them. Keep it on your phone, read it whenever you miss us, and carry our little world wherever you go. 💕</p>
+     <a class="btn-romantic" href="assets/Stories.pdf" download="Ankit-and-Divya-Our-Love-Story.pdf" onclick="showToast('Downloading our story book 📖💕')">Download Our Story 📥</a>
+     <div class="storybook-note">PDF · saved straight to your device</div>
+    </div>
+   </div>
+  </section>
+  <!-- Countdown Section -->
   <section id="countdown" class="section countdown-section">
    <h2 class="countdown-title">Time Together</h2>
    <div class="countdown-display">
@@ -1801,6 +2180,19 @@
     <p class="footer-signature">Made with ❤️ by her Ullu 🎀 — For the love that never ends.</p>
    </div>
   </footer>
+  <!-- AD Gallery popup -->
+  <div class="ad-gallery-overlay" id="adGalleryOverlay" onclick="if(event.target===this)closeAdGallery()">
+   <div class="ad-gallery-card" role="dialog" aria-modal="true" aria-labelledby="adGalleryTitle">
+    <button class="ad-gallery-close" onclick="closeAdGallery()" aria-label="Close gallery">✕</button>
+    <h3 class="ad-gallery-title" id="adGalleryTitle">AD Gallery 📸</h3>
+    <p class="ad-gallery-sub">Every little moment of Ankit × Divya, all in one place 💕</p>
+    <div class="ad-gallery-grid" id="adGalleryGrid"></div>
+   </div>
+  </div>
+  <div class="ad-lightbox" id="adLightbox" onclick="closeAdLightbox()">
+   <img id="adLightboxImg" alt="">
+   <div class="ad-lightbox-caption" id="adLightboxCaption"></div>
+  </div>
   <script>
         // Configuration object for the Element SDK
         const defaultConfig = {
@@ -2210,6 +2602,129 @@
             `;
         }
 
+        // Collapsible timeline
+        const TIMELINE_COLLAPSED_CLASS = 'collapsed';
+
+        function initTimelineToggle() {
+            const count = document.querySelectorAll('#timeline .timeline-item').length;
+            const hint = document.getElementById('timelineHint');
+            if (hint) hint.textContent = 'Peek into  moments of our story ✨';
+        }
+
+        function toggleTimeline() {
+            const clip = document.getElementById('timelineClip');
+            const section = document.getElementById('timeline');
+            const btn = document.getElementById('timelineToggle');
+            const label = document.getElementById('timelineToggleLabel');
+            const hint = document.getElementById('timelineHint');
+            if (!clip) return;
+
+            const isCollapsed = clip.classList.contains(TIMELINE_COLLAPSED_CLASS);
+
+            if (isCollapsed) {
+                // Expand: animate to the full height, then release the limit
+                const target = clip.scrollHeight;
+                clip.style.maxHeight = clip.offsetHeight + 'px';
+                clip.classList.remove(TIMELINE_COLLAPSED_CLASS);
+                section.classList.remove('is-collapsed');
+                requestAnimationFrame(() => {
+                    clip.style.maxHeight = target + 'px';
+                });
+                const done = () => {
+                    clip.style.maxHeight = 'none';
+                    clip.removeEventListener('transitionend', done);
+                };
+                clip.addEventListener('transitionend', done);
+                setTimeout(done, 1000);
+                btn.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+                label.textContent = 'Hide Timeline';
+                if (hint) hint.style.display = 'none';
+            } else {
+                // Collapse: lock the current height, then shrink to the preview
+                clip.style.maxHeight = clip.scrollHeight + 'px';
+                void clip.offsetHeight;
+                clip.classList.add(TIMELINE_COLLAPSED_CLASS);
+                clip.style.maxHeight = '';
+                btn.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+                label.textContent = 'Explore Timeline';
+                if (hint) hint.style.display = '';
+                section.classList.add('is-collapsed');
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // ===== AD Gallery popup =====
+        // Photos already shown in the Memory Gallery above are included automatically.
+        // To add MORE photos to the popup, drop them in your images folder and list them here:
+        const adGalleryExtraPhotos = [
+            // { src: 'images/your-photo.jpg', caption: 'Date (what happened)' },
+        ];
+
+        function openAdGallery() {
+            const grid = document.getElementById('adGalleryGrid');
+            grid.innerHTML = '';
+
+            // Photos kept outside (already on the page) + extra photos from the list above
+            const photos = [];
+            document.querySelectorAll('#gallery .photo-card img').forEach(img => {
+                const cap = img.closest('.photo-card').querySelector('.photo-caption');
+                photos.push({ src: img.getAttribute('src'), caption: cap ? cap.textContent.trim() : '' });
+            });
+            adGalleryExtraPhotos.forEach(p => photos.push(p));
+
+            photos.forEach(p => {
+                const item = document.createElement('div');
+                item.className = 'ad-gallery-item';
+                const img = document.createElement('img');
+                img.src = p.src;
+                img.alt = p.caption || 'Our memory';
+                img.loading = 'lazy';
+                img.onerror = () => item.remove();
+                const cap = document.createElement('div');
+                cap.className = 'ad-gallery-item-caption';
+                cap.textContent = p.caption || '';
+                item.appendChild(img);
+                item.appendChild(cap);
+                item.onclick = () => openAdLightbox(p.src, p.caption);
+                grid.appendChild(item);
+            });
+
+            const soon = document.createElement('div');
+            soon.className = 'ad-gallery-soon';
+            soon.innerHTML = '<span>💕</span>More memories coming soon';
+            grid.appendChild(soon);
+
+            document.getElementById('adGalleryOverlay').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAdGallery() {
+            closeAdLightbox();
+            document.getElementById('adGalleryOverlay').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function openAdLightbox(src, caption) {
+            document.getElementById('adLightboxImg').src = src;
+            document.getElementById('adLightboxCaption').textContent = caption || '';
+            document.getElementById('adLightbox').classList.add('open');
+        }
+
+        function closeAdLightbox() {
+            document.getElementById('adLightbox').classList.remove('open');
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key !== 'Escape') return;
+            if (document.getElementById('adLightbox').classList.contains('open')) {
+                closeAdLightbox();
+            } else if (document.getElementById('adGalleryOverlay').classList.contains('open')) {
+                closeAdGallery();
+            }
+        });
+
         // Initialize everything
         document.addEventListener('DOMContentLoaded', function() {
             createSparkles();
@@ -2217,6 +2732,7 @@
             createMouseTrail();
             updateCountdown();
             setInterval(updateCountdown, 1000);
+            initTimelineToggle();
             
             // Animate timeline items on scroll
             const observerOptions = {
