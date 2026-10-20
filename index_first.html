@@ -1,0 +1,2280 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankit × Divya - One Year of Forever</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 50%, #e6f3ff 100%);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .sparkle {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, #fff 0%, #ff69b4 50%, transparent 100%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkle 4s infinite;
+            z-index: 1;
+            box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { 
+                opacity: 0; 
+                transform: scale(0) rotate(0deg); 
+                filter: hue-rotate(0deg);
+            }
+            25% { 
+                opacity: 1; 
+                transform: scale(1.2) rotate(90deg); 
+                filter: hue-rotate(90deg);
+            }
+            50% { 
+                opacity: 0.8; 
+                transform: scale(1) rotate(180deg); 
+                filter: hue-rotate(180deg);
+            }
+            75% { 
+                opacity: 1; 
+                transform: scale(1.5) rotate(270deg); 
+                filter: hue-rotate(270deg);
+            }
+        }
+
+        .magic-particle {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: magicFloat 6s infinite linear;
+            z-index: 1;
+            box-shadow: 0 0 6px #fff, 0 0 12px #ff69b4;
+        }
+
+        @keyframes magicFloat {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) translateX(10px) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(-10vh) translateX(-10px) scale(1);
+            }
+            100% {
+                transform: translateY(-20vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+        }
+
+        .aurora {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                rgba(255, 105, 180, 0.1) 0%,
+                rgba(138, 43, 226, 0.1) 25%,
+                rgba(0, 191, 255, 0.1) 50%,
+                rgba(255, 20, 147, 0.1) 75%,
+                rgba(255, 105, 180, 0.1) 100%);
+            animation: aurora 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes aurora {
+            0%, 100% { 
+                opacity: 0.3;
+                transform: translateX(-50px) scale(1);
+            }
+            50% { 
+                opacity: 0.6;
+                transform: translateX(50px) scale(1.1);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            min-height: 100vh;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .landing {
+            background: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 100%);
+            text-align: center;
+        }
+
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff69b4, #d63384, #8a2be2, #ff1493);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            animation: fadeInUp 2s ease-out, textGlow 3s ease-in-out infinite, gradientShift 4s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(214, 51, 132, 0.8), 0 0 60px rgba(255, 105, 180, 0.6);
+            filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.8));
+        }
+
+        @keyframes textGlow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.8)) brightness(1);
+            }
+            50% { 
+                filter: drop-shadow(0 0 40px rgba(255, 105, 180, 1)) brightness(1.2);
+            }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .love-quote {
+            font-size: 1.3rem;
+            color: #6f42c1;
+            font-style: italic;
+            margin-bottom: 50px;
+            max-width: 600px;
+            animation: fadeInUp 2s ease-out 0.5s both;
+        }
+
+        .heart-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-heart {
+            position: absolute;
+            font-size: 2rem;
+            color: #ff69b4;
+            animation: float 4s ease-in-out infinite, heartGlow 2s ease-in-out infinite;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 15px rgba(255, 105, 180, 0.8));
+        }
+
+        @keyframes heartGlow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 15px rgba(255, 105, 180, 0.8)) brightness(1);
+                transform: scale(1);
+            }
+            50% { 
+                filter: drop-shadow(0 0 25px rgba(255, 105, 180, 1)) brightness(1.3);
+                transform: scale(1.1);
+            }
+        }
+
+        .featured-picture-section {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+            padding: 20px;
+        }
+
+        .featured-picture-frame {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.4), 0 0 0 8px rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+        }
+
+        .featured-picture-frame:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 30px 80px rgba(255, 105, 180, 0.6), 0 0 0 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .featured-picture-frame img {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .featured-picture-frame:hover img {
+            transform: scale(1.1);
+        }
+
+        .picture-placeholder-featured {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            text-align: center;
+        }
+
+        .picture-placeholder-featured small {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        .magic-orb {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 105, 180, 0.4), rgba(138, 43, 226, 0.2));
+            animation: orbFloat 8s ease-in-out infinite, orbGlow 3s ease-in-out infinite;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) rotate(0deg);
+            }
+            25% { 
+                transform: translateY(-30px) translateX(20px) rotate(90deg);
+            }
+            50% { 
+                transform: translateY(-60px) translateX(0px) rotate(180deg);
+            }
+            75% { 
+                transform: translateY(-30px) translateX(-20px) rotate(270deg);
+            }
+        }
+
+        @keyframes orbGlow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(255, 105, 180, 0.4), 0 0 40px rgba(138, 43, 226, 0.2);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(255, 105, 180, 0.8), 0 0 80px rgba(138, 43, 226, 0.4);
+            }
+        }
+
+        .btn-romantic {
+            background: linear-gradient(45deg, #ff69b4, #d63384, #8a2be2);
+            background-size: 200% 200%;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(214, 51, 132, 0.4), 0 0 20px rgba(255, 105, 180, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: buttonGlow 3s ease-in-out infinite;
+        }
+
+        .btn-romantic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-romantic:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(214, 51, 132, 0.6), 0 0 30px rgba(255, 105, 180, 0.8);
+            background-position: 100% 0;
+        }
+
+        .btn-romantic:hover::before {
+            left: 100%;
+        }
+
+        @keyframes buttonGlow {
+            0%, 100% { 
+                box-shadow: 0 8px 25px rgba(214, 51, 132, 0.4), 0 0 20px rgba(255, 105, 180, 0.3);
+            }
+            50% { 
+                box-shadow: 0 8px 25px rgba(214, 51, 132, 0.6), 0 0 30px rgba(255, 105, 180, 0.5);
+            }
+        }
+
+        .timeline-section {
+            background: linear-gradient(135deg, #f0e6ff 0%, #e6f3ff 100%);
+            padding: 80px 20px;
+        }
+
+        .timeline-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #6f42c1;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #ff69b4, #6f42c1);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 60%;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 60%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 48.8%;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: #ff69b4;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            animation: heartbeat 2s infinite;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: #d63384;
+            margin-bottom: 10px;
+        }
+
+        .timeline-text {
+            color: #495057;
+            line-height: 1.6;
+        }
+
+        .gallery-section {
+            background: linear-gradient(135deg, #e6f3ff 0%, #ffeef8 100%);
+            padding: 80px 20px;
+        }
+
+        .gallery-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #0d6efd;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .photo-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: rotate(-2deg);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 105, 180, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        .photo-card:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .photo-card:hover {
+            transform: rotate(0deg) scale(1.08) translateY(-10px);
+            box-shadow: 0 25px 50px rgba(255, 105, 180, 0.3), 0 0 30px rgba(255, 105, 180, 0.2);
+        }
+
+        .photo-card:hover::before {
+            opacity: 1;
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #ffeef8, #f0e6ff);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .photo-caption {
+            font-style: italic;
+            color: #6c757d;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .chat-section {
+            background: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 100%);
+            padding: 80px 20px;
+        }
+
+        .chat-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #d63384;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .message.sent {
+            justify-content: flex-end;
+        }
+
+        .message-bubble {
+            max-width: 70%;
+            padding: 12px 18px;
+            border-radius: 18px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .message.sent .message-bubble {
+            background: #007bff;
+            color: white;
+        }
+
+        .message.received .message-bubble {
+            background: #f1f3f4;
+            color: #333;
+        }
+
+        .message-time {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+
+        .letters-section {
+            background: linear-gradient(135deg, #f0e6ff 0%, #e6f3ff 100%);
+            padding: 80px 20px;
+        }
+
+        .letters-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #6f42c1;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .letters-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .letter-envelope {
+            background: #fff8dc;
+            border: 2px solid #daa520;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .letter-envelope:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .letter-seal {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #d63384;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .letter-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #8b4513;
+            margin-bottom: 20px;
+        }
+
+        .letter-preview {
+            color: #654321;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .countdown-section {
+            background: linear-gradient(135deg, #e6f3ff 0%, #ffeef8 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .countdown-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #0d6efd;
+            margin-bottom: 40px;
+        }
+
+        .countdown-display {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 600px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #d63384;
+            margin-bottom: 10px;
+            animation: heartbeat 2s infinite;
+        }
+
+        .countdown-label {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .dreams-section {
+            background: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 100%);
+            padding: 80px 20px;
+        }
+
+        .dreams-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #d63384;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .dreams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .dream-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .dream-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .dream-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .dream-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #6f42c1;
+            margin-bottom: 15px;
+        }
+
+        .dream-description {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .video-section {
+            background: linear-gradient(135deg, #f0e6ff 0%, #e6f3ff 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .video-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #6f42c1;
+            margin-bottom: 40px;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(45deg, #ffeef8, #f0e6ff);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .video-placeholder-icon {
+            font-size: 4rem;
+            color: #d63384;
+            margin-bottom: 20px;
+        }
+
+        .video-subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #6f42c1;
+            margin-bottom: 10px;
+        }
+
+        .music-controls {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .music-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff69b4, #d63384);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(214, 51, 132, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(214, 51, 132, 0.4);
+        }
+
+        .secret-heart {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 1000;
+            animation: heartbeat 3s infinite;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .secret-heart:hover {
+            opacity: 1;
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.8));
+        }
+
+        .scroll-top-heart {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #ff69b4, #d63384);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(214, 51, 132, 0.3);
+        }
+
+        .scroll-top-heart.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-top-heart:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 35px rgba(214, 51, 132, 0.4);
+        }
+
+        /* Glowing heart cursor */
+        body {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><text y="16" font-size="16">💖</text></svg>'), auto;
+        }
+
+        /* Parallax effect */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .legacy-section {
+            background: linear-gradient(135deg, #e6f3ff 0%, #ffeef8 100%);
+            padding: 80px 20px;
+        }
+
+        .legacy-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #0d6efd;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .future-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .future-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #0d6efd, #6f42c1, #d63384);
+            transform: translateX(-50%);
+        }
+
+        .future-item {
+            margin-bottom: 50px;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .future-item:nth-child(odd) .future-content {
+            margin-left: 60%;
+        }
+
+        .future-item:nth-child(even) .future-content {
+            margin-right: 60%;
+        }
+
+        .future-dot {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(204, 204, 204, 0.5);
+        }
+
+        .future-dot.completed {
+            background: #0d6efd;
+            box-shadow: 0 0 20px rgba(13, 110, 253, 0.5);
+            animation: heartbeat 2s infinite;
+        }
+
+        .future-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .future-item:not(.completed) .future-content {
+            opacity: 0.7;
+            filter: grayscale(0.3);
+        }
+
+        .future-date {
+            font-weight: 600;
+            color: #0d6efd;
+            margin-bottom: 10px;
+        }
+
+        .future-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #6f42c1;
+            margin-bottom: 10px;
+        }
+
+        .future-description {
+            color: #495057;
+            line-height: 1.6;
+        }
+
+        .future-description.reserved {
+            font-style: italic;
+            color: #6c757d;
+        }
+
+        .footer-section {
+            background: linear-gradient(135deg, #f0e6ff 0%, #ffeef8 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-quote {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #6f42c1;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .footer-signature {
+            font-size: 1.1rem;
+            color: #d63384;
+            font-weight: 500;
+        }
+
+        .navigation {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #6f42c1;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-btn:hover {
+            background: #6f42c1;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 50px;
+                margin-right: 0;
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+            
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .dreams-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Magical Background Effects -->
+  <div class="aurora"></div>
+  <div class="sparkles-container"></div>
+  <div class="magic-particles-container"></div><!-- Navigation -->
+  <nav class="navigation"><button class="nav-btn" onclick="scrollToSection('landing')">Home</button> <button class="nav-btn" onclick="scrollToSection('timeline')">Story</button> <button class="nav-btn" onclick="scrollToSection('gallery')">Photos</button> <button class="nav-btn" onclick="scrollToSection('dreams')">Dreams</button> <button class="nav-btn" onclick="scrollToSection('legacy')">Future</button>
+  </nav><!-- Music Controls -->
+  <div class="music-controls"><button class="music-btn" onclick="toggleMusic()" id="musicBtn">🎵</button>
+  </div><!-- Secret Easter Egg Heart -->
+  <div class="secret-heart" onclick="showSecretMessage()" title="Click for a surprise 💕">
+   💖
+  </div><!-- Scroll to Top Heart -->
+  <div class="scroll-top-heart" onclick="scrollToTop()" id="scrollTopHeart">
+   💕
+  </div><!-- Landing Section -->
+  <section id="landing" class="section landing">
+   <div class="heart-container">
+    <div class="floating-heart" style="left: 10%; animation-delay: 0s;">
+     💖
+    </div>
+    <div class="floating-heart" style="left: 20%; animation-delay: 1s;">
+     💕
+    </div>
+    <div class="floating-heart" style="left: 80%; animation-delay: 2s;">
+     💗
+    </div>
+    <div class="floating-heart" style="left: 90%; animation-delay: 3s;">
+     💝
+    </div>
+    <div class="magic-orb" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+    <div class="magic-orb" style="top: 60%; right: 20%; animation-delay: 2s;"></div>
+    <div class="magic-orb" style="top: 40%; left: 70%; animation-delay: 4s;"></div>
+   </div>
+   <h1 class="main-title" id="coupleNames">Ankit × Divya — One Year of Forever ✨</h1>
+   <div class="featured-picture-section">
+            <div class="featured-picture-frame">
+                <img id="featuredPicture" src="images/IMG_20250929_151547_779.jpg" alt="Cute US" onerror="showPicturePlaceholder(this)">
+                <div class="picture-overlay">
+                    <div class="picture-text">
+                        <h3>Ankit and DivyA forever</h3>
+                        <p>The beginning of a very cute life together</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   <p class="love-quote" id="loveQuote">Our forever increasing love for each other.</p>
+   <div><button class="btn-romantic" onclick="scrollToSection('timeline')">Enter Our World 💞</button> <button class="btn-romantic" onclick="playOurSong()">Listen to Our Song 🎶</button>
+   </div>
+  </section><!-- Timeline Section -->
+  <section id="timeline" class="section timeline-section">
+   <h2 class="timeline-title">Our Love Story Timeline</h2>
+   <div class="timeline">
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       June 22nd, 2024
+      </div>
+      <div class="timeline-text" id="firstMeeting">
+       The day our eyes met and everything changed. What started as a simple conversation became the beginning of our forever story. 💫
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       July 27th, 2024
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       The time when we first started chatting together till the midnight. Remember the "Hey, are you giving any olympiad?"
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       July 30th, 2024
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       It was raining heavily after the school, I came near you and you gave me shelter under your umbrella and it was the same day when your hair got stuck in the umbrella.
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       August 02nd, 2024
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       Our first hand shake after getting off from the school. That was a very involuntary action but it was worth it.
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       September 25th, 2024
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       Your first birthday with us being together. The same day, when it was the first I time I gave you a chocolate.
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       October 22nd, 2024
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       The best day - The day on which the rumors got true. After getting off from school, I was like "DivyA, pata hai? Mujhe August se hi tum par crush hai" and her reply "Pata hai".
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       November, 2024
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       When we started to know each other better post confession. The chats got meaningful, comfort increased and the trust between us got deeper and deeper
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       December 04, 2024
+      </div>
+      <div class="timeline-text">
+       Our first picture together — capturing the moment when we knew this was real, this was us, this was our beginning. 📸
+       The same month when we started having midnight conversations till 2am.
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       January 01, 2025
+      </div>
+      <div class="timeline-text">
+       Celebrated our first new year together virtually 
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       January 22nd, 2025
+      </div>
+      <div class="timeline-text">
+       The day you said "blabliblu" — Though it was your indirect confession towards me which I didn't really get it at that time but it feels so special now 💖
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       January 25th, 2025
+      </div>
+      <div class="timeline-text">
+       Our second photo together with added excitement
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       February 02nd, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       The first time when we both started expressing ourselves even more. We had no tag of a romantic relationship but we acted like if we already were in a relationship.
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       February 08th, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       The first time we started ourselves each other's. When we knew that we are made for each other and meant to be together. The phase of Boyfriend - Girlfriend Phase begins 
+      </div>
+     </div>
+    </div>
+     <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       February 16th, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       The day we made our relationship official by calling each other Boyfriend and Girlfriend but it didn't feel new, cuz we always acted like we were but never had the courage to openly label it.
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       March 13th, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       Our third photo together outside the school and our first holi together putting colors on each other. 
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       March 21st, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       The first time when we started having virtual lip kisses.
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       April 02nd, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+        First time we held our hands romantically. Remember? "Tum chale jao bhagte hue", "Ehh, hath pakro toh tum"
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       April 09th, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+        You gave me the first kiss of us. You cupped my face and I pulled you to the corner of a wall and asked you "do na do na" (A kiss on my cheek)
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       April 13th, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       The first time we started calling each other Husband and WiFe. The first time we called each other officially a couple after the Boyfriend - Girlfriend phase.
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       June 24th, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+       The first time when we kissed each other on our lips. She was managing the class board when the class was empty in the early morning. I approached her, asked her to turn this side and joined our lips together. We kissed each other 3 times for 3 seconds each 
+      </div>
+     </div>
+    </div> 
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       August 21st, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+      The next time when we got into the same umbrella. This time it was intentional. It was raining heavily after we were off from school. And I held the umbrella placing my hand on her shoulders for the first time while walking
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       September 05th, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+      The Teachers day. The first time when we both clicked many photos of ourselves as well as the couples ones too....
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       September 27th, 2025
+      </div>
+      <div class="timeline-text" id="confessionStory">
+      The first time when we hopped the Durga Puja together and clicked many photos there too.
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       October 22nd 2025 (1 Year)
+      </div>
+      <div class="timeline-text">
+       One year later, and every day still feels like the first day I fell in love with you. Here's to forever. 🌟
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Photo Gallery Section -->
+  <section id="gallery" class="section gallery-section">
+   <h2 class="gallery-title">Our Memory Gallery</h2>
+   <div class="photo-grid">
+    <div class="photo-card">
+     <div class="photo-placeholder">
+      <img src="images/IMG_20250325_194132_819.jpg" alt="" srcset="">
+     </div>
+     <div class="photo-caption">
+      December 04 , 2024 (Annual Sports Day)
+     </div>
+    </div>
+    <div class="photo-card">
+     <div class="photo-placeholder">
+      <img src="images/IMG_20250325_194147_996.jpg" alt="" srcset="">
+     </div>
+     <div class="photo-caption">
+      January 25, 2026 (Farewell 2024 - 2025)
+     </div>
+    </div>
+    <div class="photo-card">
+     <div class="photo-placeholder">
+      <img src="images/IMG_20250325_194159_769.jpg" alt="" srcset="">
+     </div>
+     <div class="photo-caption">
+      March 13, 2025 (Random special moment together)
+     </div>
+    </div>
+    <div class="photo-card">
+     <div class="photo-placeholder">
+      <img src="images/Screenshot_20250721-215050_1.jpg" alt="" srcset="">
+     </div>
+     <div class="photo-caption">
+      July 16, 2025 (Just us, being perfect together)
+     </div>
+    </div>
+    <div class="photo-card">
+     <div class="photo-placeholder">
+      <img src="images/IMG_20250929_151547_779.jpg" alt="" srcset="">
+     </div>
+     <div class="photo-caption">
+      September 05, 2025 (After the teachers day 2024 - 2025)
+     </div>
+    </div>
+    <div class="photo-card">
+     <div class="photo-placeholder">
+      <img src="images/552706160_785542030955881_9142072286709906371_n.jpg" alt="" srcset="">
+     </div>
+     <div class="photo-caption">
+      September 26, 2025 (Again one random special moment together)
+     </div>
+    </div> 
+    <div class="photo-card">
+     <div class="photo-placeholder">
+      <img src="images/IMG_20250929_151930_765.jpg" alt="" srcset="">
+     </div>
+     <div class="photo-caption">
+      September 27, 2025 (Pandal Hopping)
+     </div>
+    </div>
+    <div class="photo-card">
+     <div class="photo-placeholder">
+      <p>📸</p>
+     </div>
+     <div class="photo-caption">
+      CLICK FOR AD GALLERY
+     </div>
+    </div>
+   </div>
+  </section><!-- Chat Memories Section -->
+  <section id="chat" class="section chat-section">
+   <h2 class="chat-title">The Most Anticipating Conversation Of All Time</h2>
+   <div class="chat-container" id="chatContainer">
+    <div class="message received">
+     <div class="message-bubble">
+      Hey
+      <div class="message-time">
+       10:08 PM
+      </div>
+     </div>
+    </div>
+    <div class="message sent">
+     <div class="message-bubble">
+      ?
+      <div class="message-time">
+       10:08 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      About today.. wasn't trying to make it awkward
+      <div class="message-time">
+       10:09 PM
+      </div>
+     </div>
+    </div>
+    <div class="message sent">
+     <div class="message-bubble">
+      Ummm
+      <div class="message-time">
+       10:09 PM
+      </div>
+     </div>
+    </div>
+    <div class="message sent">
+     <div class="message-bubble">
+      Me khud nervous feel kar rha tha
+      <div class="message-time">
+       10:10 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      Laga nahi tha bologe
+      <div class="message-time">
+       10:10 PM
+      </div>
+     </div>
+    </div>
+    <div class="message sent">
+     <div class="message-bubble">
+      Idk, bol diya ab
+      <div class="message-time">
+       10:11 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      Achaa
+      <div class="message-time">
+       10:11 PM
+      </div>
+     </div>
+    </div>
+    <div class="message sent">
+     <div class="message-bubble">
+      Kuch problem hogya kya?
+      <div class="message-time">
+       10:12 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      Nahi Nahi
+      <div class="message-time">
+       10:12 PM
+      </div>
+     </div>
+    </div>
+    <div class="message sent">
+     <div class="message-bubble">
+      In case agar hua ho toh....
+      <div class="message-time">
+       10:12 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      Thik hai
+      <div class="message-time">
+       10:13 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      Mai nahi bol pai
+      <div class="message-time">
+       10:13 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      😛
+      <div class="message-time">
+       10:13 PM
+      </div>
+     </div>
+    </div>
+    <div class="message sent">
+     <div class="message-bubble">
+      First time hai na isiliye 😂
+      <div class="message-time">
+       10:14 PM
+      </div>
+     </div>
+    </div>
+    <div class="message sent">
+     <div class="message-bubble">
+      Bolna tha kuch? 
+      <div class="message-time">
+       10:14 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      Same thing ig
+      <div class="message-time">
+       10:14 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      🙃
+      <div class="message-time">
+       10:14 PM
+      </div>
+     </div>
+    </div>
+    <div class="message sent">
+     <div class="message-bubble">
+      Arre sahi me? 😂 
+      <div class="message-time">
+       10:15 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      Lets Laugh it out
+      <div class="message-time">
+       10:15 PM
+      </div>
+     </div>
+    </div>
+    <div class="message received">
+     <div class="message-bubble">
+      😂
+      <div class="message-time">
+       10:15 PM
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Letters Section -->
+  <section id="letters" class="section letters-section">
+   <h2 class="letters-title">Love Letters</h2>
+   <div class="letters-container">
+    <div class="letter-envelope" onclick="openLetter('his')">
+     <div class="letter-seal">
+      💌
+     </div>
+     <div class="letter-title">
+      From His Heart
+     </div>
+     <div class="letter-preview" id="loveLetter">
+      Heyyy, DivyA... Its been a year together 🤭
+        It also started from June 22nd, 2024, Didn't expect that this could get real with you. The day I saw you, You looked so pretty, so charming.....
+     </div>
+    </div>
+    <div class="letter-envelope" onclick="openLetter('hers')">
+     <div class="letter-seal">
+      💕
+     </div>
+     <div class="letter-title">
+      From Her Heart
+     </div>
+     <div class="letter-preview">
+        I loveee youuu soo soo sooo muchhh Ankitttt❣🤧... kitneeee sweettt pyareee considerate babyy ho mereeee🫠🫠🌟 i wanna be with youuu hameshaa forever 😭❣ neverr thinkkk anything negativeee about yourself!....
+     </div>
+    </div>
+   </div>
+  </section><!-- Countdown Section -->
+  <section id="countdown" class="section countdown-section">
+   <h2 class="countdown-title">Time Together</h2>
+   <div class="countdown-display">
+    <div class="countdown-number" id="daysCount">
+     365
+    </div>
+    <div class="countdown-label">
+     Days of Love and Counting 💞
+    </div>
+    <div style="font-size: 1.1rem; color: #6c757d; margin-top: 20px;"><span id="timeDetails">12 hours, 15 minutes, 42 seconds</span>
+    </div>
+   </div>
+   <div class="countdown-display" style="margin-top: 30px;">
+    <div style="font-size: 1.5rem; color: #d63384; margin-bottom: 10px;">
+     Next Anniversary In:
+    </div>
+    <div class="countdown-number" id="nextAnniversary">
+     0
+    </div>
+    <div class="countdown-label">
+     Days to Go! 🎉
+    </div>
+   </div>
+  </section><!-- Future Dreams Section -->
+  <section id="dreams" class="section dreams-section">
+   <h2 class="dreams-title">Our Future Dreams</h2>
+   <div class="dreams-grid">
+    <div class="dream-card" onclick="showDreamDetails('college')">
+     <div class="dream-icon">
+      🎓
+     </div>
+     <div class="dream-title" id="futureDream1">
+      College Life Together
+     </div>
+     <div class="dream-description">
+      Building our future side by side, supporting each other through every challenge and celebrating every success.
+     </div>
+    </div>
+    <div class="dream-card" onclick="showDreamDetails('travel')">
+     <div class="dream-icon">
+      🏔️
+     </div>
+     <div class="dream-title" id="futureDream2">
+      Our First Trip
+     </div>
+     <div class="dream-description">
+      Exploring the world together, creating memories in every corner of the earth, hand in hand.
+     </div>
+    </div>
+    <div class="dream-card" onclick="showDreamDetails('home')">
+     <div class="dream-icon">
+      🏡
+     </div>
+     <div class="dream-title">
+      Our Dream Home
+     </div>
+     <div class="dream-description">
+      A cozy place filled with laughter, love, and fairy lights where we'll build our life together.
+     </div>
+    </div>
+    <div class="dream-card" onclick="showDreamDetails('family')">
+     <div class="dream-icon">
+      👶
+     </div>
+     <div class="dream-title">
+      Little Versions of Us
+     </div>
+     <div class="dream-description">
+      Someday, tiny hands to hold and little hearts to love, carrying on our beautiful story.
+     </div>
+    </div>
+   </div>
+  </section><!-- Video Section -->
+  <section id="video" class="section video-section">
+   <h2 class="video-title">Our Love Story Video</h2>
+   <div class="video-container">
+    <div class="video-placeholder">
+     <div class="video-placeholder-icon">
+      🎬
+     </div>
+     <div class="video-subtitle">
+      One Year Down, Forever to Go 💍
+     </div>
+     <p style="color: #6c757d; margin: 0;">A beautiful compilation of our memories, set to our favorite song, capturing every precious moment of our journey together.</p>
+    </div><button class="btn-romantic" onclick="playVideo()">Play Our Story 💕</button>
+   </div>
+  </section><!-- Future Legacy Timeline Section -->
+  <section id="legacy" class="section legacy-section">
+   <h2 class="legacy-title">Our Forever Story Continues</h2>
+   <div class="future-timeline">
+    <div class="future-item completed">
+     <div class="future-dot completed"></div>
+     <div class="future-content">
+      <div class="future-date">
+       Year 1 ✨
+      </div>
+      <div class="future-title">
+       Our First Anniversary
+      </div>
+      <div class="future-description">
+       The beautiful beginning of our forever story. One year of love, laughter, and endless memories.
+      </div>
+     </div>
+    </div>
+    <div class="future-item">
+     <div class="future-dot"></div>
+     <div class="future-content">
+      <div class="future-date">
+       Coming Soon
+      </div>
+      <div class="future-title">
+       Our College Days 🎓
+      </div>
+      <div class="future-description reserved">
+       Reserved for the next chapter of our forever.
+      </div>
+     </div>
+    </div>
+    <div class="future-item">
+     <div class="future-dot"></div>
+     <div class="future-content">
+      <div class="future-date">
+       Future
+      </div>
+      <div class="future-title">
+       Our Engagement 💍
+      </div>
+      <div class="future-description reserved">
+       Reserved for the next chapter of our forever.
+      </div>
+     </div>
+    </div>
+    <div class="future-item">
+     <div class="future-dot"></div>
+     <div class="future-content">
+      <div class="future-date">
+       Future
+      </div>
+      <div class="future-title">
+       Our Marriage 👰‍♀️🤵‍♂️
+      </div>
+      <div class="future-description reserved">
+       Reserved for the next chapter of our forever.
+      </div>
+     </div>
+    </div>
+    <div class="future-item">
+     <div class="future-dot"></div>
+     <div class="future-content">
+      <div class="future-date">
+       Future
+      </div>
+      <div class="future-title">
+       Our Forever Home 🏡
+      </div>
+      <div class="future-description reserved">
+       Reserved for the next chapter of our forever.
+      </div>
+     </div>
+    </div>
+    <div class="future-item">
+     <div class="future-dot"></div>
+     <div class="future-content">
+      <div class="future-date">
+       Future
+      </div>
+      <div class="future-title">
+       Our 50th Anniversary 💎
+      </div>
+      <div class="future-description reserved">
+       Reserved for the next chapter of our forever.
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="footer-section">
+   <div class="footer-content">
+    <p class="footer-quote">"This isn't just a website. It's our forever story, preserved in pixels and love."</p>
+    <p class="footer-signature">Made with ❤️ by her Ullu 🎀 — For the love that never ends.</p>
+   </div>
+  </footer>
+  <script>
+        // Configuration object for the Element SDK
+        const defaultConfig = {
+            couple_names: "Ankit × Divya — One Year of Forever ✨",
+            anniversary_date: "August 15, 2024",
+            love_quote: "Some stories don't end, they just grow deeper with time.",
+            first_meeting: "The day our eyes met and everything changed. What started as a simple conversation became the beginning of our forever story. 💫",
+            confession_story: "The confession — when we realized it wasn't just friendship, it was something deeper, something that made our hearts race every time we saw each other. 💕",
+            future_dream_1: "College Life Together",
+            future_dream_2: "Our First Trip",
+            love_letter: "My dearest love, this year has been the most beautiful chapter of my life. Every day with you feels like a dream I never want to wake up from..."
+        };
+
+        // Initialize Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                render: async (config) => {
+                    // Update couple names
+                    const coupleNamesEl = document.getElementById('coupleNames');
+                    if (coupleNamesEl) {
+                        coupleNamesEl.textContent = config.couple_names || defaultConfig.couple_names;
+                    }
+
+                    // Update love quote
+                    const loveQuoteEl = document.getElementById('loveQuote');
+                    if (loveQuoteEl) {
+                        loveQuoteEl.textContent = config.love_quote || defaultConfig.love_quote;
+                    }
+
+                    // Update first meeting story
+                    const firstMeetingEl = document.getElementById('firstMeeting');
+                    if (firstMeetingEl) {
+                        firstMeetingEl.textContent = config.first_meeting || defaultConfig.first_meeting;
+                    }
+
+                    // Update confession story
+                    const confessionStoryEl = document.getElementById('confessionStory');
+                    if (confessionStoryEl) {
+                        confessionStoryEl.textContent = config.confession_story || defaultConfig.confession_story;
+                    }
+
+                    // Update future dreams
+                    const futureDream1El = document.getElementById('futureDream1');
+                    if (futureDream1El) {
+                        futureDream1El.textContent = config.future_dream_1 || defaultConfig.future_dream_1;
+                    }
+
+                    const futureDream2El = document.getElementById('futureDream2');
+                    if (futureDream2El) {
+                        futureDream2El.textContent = config.future_dream_2 || defaultConfig.future_dream_2;
+                    }
+
+                    // Update love letter
+                    const loveLetterEl = document.getElementById('loveLetter');
+                    if (loveLetterEl) {
+                        loveLetterEl.textContent = config.love_letter || defaultConfig.love_letter;
+                    }
+                },
+                mapToCapabilities: (config) => ({
+                    recolorables: [],
+                    borderables: [],
+                    fontEditable: undefined,
+                    fontSizeable: undefined
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ["couple_names", config.couple_names || defaultConfig.couple_names],
+                    ["anniversary_date", config.anniversary_date || defaultConfig.anniversary_date],
+                    ["love_quote", config.love_quote || defaultConfig.love_quote],
+                    ["first_meeting", config.first_meeting || defaultConfig.first_meeting],
+                    ["confession_story", config.confession_story || defaultConfig.confession_story],
+                    ["future_dream_1", config.future_dream_1 || defaultConfig.future_dream_1],
+                    ["future_dream_2", config.future_dream_2 || defaultConfig.future_dream_2],
+                    ["love_letter", config.love_letter || defaultConfig.love_letter]
+                ])
+            });
+        }
+
+        // Create floating sparkles
+        function createSparkles() {
+            const container = document.querySelector('.sparkles-container');
+            if (!container) return;
+            
+            for (let i = 0; i < 30; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 4 + 's';
+                container.appendChild(sparkle);
+            }
+        }
+
+        // Create magical floating particles
+        function createMagicParticles() {
+            const container = document.querySelector('.magic-particles-container');
+            if (!container) return;
+            
+            setInterval(() => {
+                const particle = document.createElement('div');
+                particle.className = 'magic-particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = '0s';
+                container.appendChild(particle);
+                
+                // Remove particle after animation
+                setTimeout(() => {
+                    if (container.contains(particle)) {
+                        container.removeChild(particle);
+                    }
+                }, 6000);
+            }, 800);
+        }
+
+        // Add magical mouse trail effect
+        function createMouseTrail() {
+            let mouseX = 0, mouseY = 0;
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                // Create trail particle occasionally
+                if (Math.random() < 0.1) {
+                    const trail = document.createElement('div');
+                    trail.style.cssText = `
+                        position: fixed;
+                        left: ${mouseX}px;
+                        top: ${mouseY}px;
+                        width: 4px;
+                        height: 4px;
+                        background: radial-gradient(circle, #fff, #ff69b4);
+                        border-radius: 50%;
+                        pointer-events: none;
+                        z-index: 9999;
+                        animation: trailFade 1s ease-out forwards;
+                    `;
+                    document.body.appendChild(trail);
+                    
+                    setTimeout(() => {
+                        if (document.body.contains(trail)) {
+                            document.body.removeChild(trail);
+                        }
+                    }, 1000);
+                }
+            });
+        }
+
+        // Add trail fade animation
+        const trailStyle = document.createElement('style');
+        trailStyle.textContent = `
+            @keyframes trailFade {
+                0% { 
+                    opacity: 1; 
+                    transform: scale(1); 
+                }
+                100% { 
+                    opacity: 0; 
+                    transform: scale(0) translateY(-20px); 
+                }
+            }
+        `;
+        document.head.appendChild(trailStyle);
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Music functionality
+        let isPlaying = false;
+        function toggleMusic() {
+            const btn = document.getElementById('musicBtn');
+            if (isPlaying) {
+                btn.textContent = '🎵';
+                isPlaying = false;
+                // In a real implementation, you would pause the audio here
+            } else {
+                btn.textContent = '⏸️';
+                isPlaying = true;
+                // In a real implementation, you would play the audio here
+            }
+        }
+
+        function playOurSong() {
+            // Custom modal for song selection
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.8); display: flex; align-items: center;
+                justify-content: center; z-index: 10000;
+            `;
+            
+            const content = document.createElement('div');
+            content.style.cssText = `
+                background: white; padding: 40px; border-radius: 20px;
+                text-align: center; max-width: 400px; margin: 20px;
+            `;
+            
+            content.innerHTML = `
+                <h3 style="font-family: 'Dancing Script', cursive; font-size: 2rem; color: #d63384; margin-bottom: 20px;">Choose Our Song 🎶</h3>
+                <p style="color: #6c757d; margin-bottom: 30px;">Select the perfect soundtrack for our love story</p>
+                <button onclick="selectSong('romantic')" style="display: block; width: 100%; margin: 10px 0; padding: 15px; border: none; border-radius: 10px; background: linear-gradient(45deg, #ff69b4, #d63384); color: white; cursor: pointer;">Romantic Instrumental 💕</button>
+                <button onclick="selectSong('our-song')" style="display: block; width: 100%; margin: 10px 0; padding: 15px; border: none; border-radius: 10px; background: linear-gradient(45deg, #6f42c1, #0d6efd); color: white; cursor: pointer;">Our Special Song 🎵</button>
+                <button onclick="closeModal()" style="display: block; width: 100%; margin: 20px 0 0 0; padding: 10px; border: 1px solid #ddd; border-radius: 10px; background: white; color: #6c757d; cursor: pointer;">Close</button>
+            `;
+            
+            modal.appendChild(content);
+            document.body.appendChild(modal);
+            
+            window.selectSong = function(type) {
+                closeModal();
+                toggleMusic();
+                // Show a toast message
+                showToast(type === 'romantic' ? 'Playing romantic instrumental 🎶' : 'Playing our special song 💕');
+            };
+            
+            window.closeModal = function() {
+                document.body.removeChild(modal);
+            };
+        }
+
+        // Show toast message
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed; bottom: 100px; right: 30px; background: rgba(214, 51, 132, 0.9);
+                color: white; padding: 15px 25px; border-radius: 25px; z-index: 1000;
+                animation: fadeInUp 0.5s ease-out;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'fadeInUp 0.5s ease-out reverse';
+                setTimeout(() => document.body.removeChild(toast), 500);
+            }, 3000);
+        }
+
+        // Letter functionality
+        function openLetter(type) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.8); display: flex; align-items: center;
+                justify-content: center; z-index: 10000; padding: 20px;
+            `;
+            
+            const letter = document.createElement('div');
+            letter.style.cssText = `
+                background: #fff8dc; padding: 40px; border-radius: 15px;
+                max-width: 600px; max-height: 80vh; overflow-y: auto;
+                font-family: 'Dancing Script', cursive; line-height: 1.8;
+                border: 2px solid #daa520;
+            `;
+            
+            const letterContent = type === 'his' ? 
+                `<h3 style="color: #8b4513; font-size: 2rem; margin-bottom: 20px;">From His Heart 💌</h3>
+                <p style="color: #654321; font-size: 1.2rem;">Heyyy, DivyA... Its been a year together 🤭
+                    It also started from June 22nd, 2024, Didn't expect that this could get real with you. The day I saw you, You looked so pretty, so charming, your hair, your voice. You felt so comfortable. Your voice attracted me first then your eyes. Gosh, those literally kill me. I just thought that I won't have any chance but the reality today is just way above my expectation. I found such a true love that I had never imagined before that too in this generation 😭. Kitni cute ho yaar tum, I feel like tum literally heaven se aayi ho. Itni cute , itni pyari, itni attractive, itna care karne wali larki ho na tum. Seriously, blessed to have you in my life and desire soo much to to spend the rest of our lives together, I want to fulfill all your wishes and always see you smiling because thats my peace. We literally call ek dusre ko "mera", "Hubby" , "Wifey" yoo thats the something which still gives me butterflies when I actually imagine it deeply. And the couple photo together? Abhi bhi kitna jyada butterflies deta hai yaar wo photo jab bhi dekhta hu. And remember the first photo of us together? That was like a big milestone cleared for me. Subah subah uth kar sabse pahle wahi photo dekhta tha. I used to feel , how lucky I got to have her in life. I always feel it though cuz your so cuteeeeeeee. I just couldn't wait when we could officially call each other "mine" in front of the world. I love you in the ways, I never did to anyone. I feel some special energy around you, your odor, your face, your looks, your hair, your voice, your heart, your nature... Everything is such a divine that its incomparable to anyone. You are very special and the most heart melting person for me DivyA Every second with you feels like home, like I was meant to find you and never let go. You’re my peace, when I see you smile, the happiness in myself is soo true and real for you. When I look at you, I don’t just see my girlfriend , I see my forever, my future, my everything. I promise you, DivyA, no matter whatever we go through, I’ll always make you feel loved, protected, and safe like the queen you are. This is just our first year, baby. imagine how beautiful the rest of our forever is gonna be DivyA 🙃
+                    I really love you a lott DivyA, more than any words could express, I really want to express it through my actions. Because you deserve to be loved, happy and cared for. 
+                     Your mine Divine, My DivyA, My World, My Wife, My Baby, My Kuchu Puchu, My Cutie, My CuTiPie, My everything DivyA 🙃    </p>` :
+                `<h3 style="color: #8b4513; font-size: 2rem; margin-bottom: 20px;">From Her Heart 💕</h3>
+                <p style="color: #654321; font-size: 1.2rem;">I loveee youuu soo soo sooo muchhh Ankitttt❣🤧... kitneeee sweettt pyareee considerate babyy ho mereeee🫠🫠🌟 i wanna be with youuu hameshaa forever 😭❣ neverr thinkkk anything negativeee about yourself!  😭 u r theee mostttt special and precious person to me cutuuuuu! Myyy hubbbyyyy😭❣😌 and I am soo soo sooo Proud of youuu and US darling ❤ 
+                Mela Ankitttt! I lovee so sooo muchhhhhh🙈❣ more than words could ever expressss😘</p>`;
+            
+            letter.innerHTML = letterContent + `<button onclick="closeLetterModal()" style="margin-top: 30px; padding: 15px 30px; border: none; border-radius: 25px; background: linear-gradient(45deg, #ff69b4, #d63384); color: white; cursor: pointer; font-size: 1rem;">Close Letter 💌</button>`;
+            
+            modal.appendChild(letter);
+            document.body.appendChild(modal);
+            
+            window.closeLetterModal = function() {
+                document.body.removeChild(modal);
+            };
+        }
+
+        // Dream details
+        function showDreamDetails(dreamType) {
+            const dreams = {
+                college: "We'll study together, support each other through exams, and build our future side by side. Late night study sessions will become our favorite memories. 📚💕",
+                travel: "From mountain peaks to ocean shores, we'll explore the world hand in hand, collecting memories and creating stories to tell for a lifetime. 🌍✈️",
+                home: "A cozy place with fairy lights, plants in every corner, and walls filled with our photos. Where we'll cook together, dance in the kitchen, and build our life. 🏡💫",
+                family: "Little hands to hold, bedtime stories to tell, and watching our love grow into a beautiful family. The next chapter of our forever story. 👶💕"
+            };
+            
+            showToast(dreams[dreamType] || "A beautiful dream we'll make come true together! 💖");
+        }
+
+        // Video functionality
+        function playVideo() {
+            showToast("Playing our love story compilation 🎬💕");
+        }
+
+        // Secret love messages array
+        const secretMessages = [
+            "Hey, did you smile today? You look cutest when you do 💕",
+            "This heart beats for you, always.",
+            "You're the reason I believe in forever 🌟",
+            "Every day with you is my favorite day 💖",
+            "You make ordinary moments feel like magic ✨",
+            "In a world full of chaos, you're my peace 🕊️",
+            "Your laugh is my favorite sound in the universe 🎵",
+            "You're not just my love, you're my home 🏡",
+            "I fall in love with you more every single day 💕",
+            "You're the best part of every story I tell 📖",
+            "Your smile could light up the darkest night 🌙",
+            "With you, I've found my happily ever after 👑",
+            "You're my favorite notification 📱💕",
+            "Every love song makes sense when I think of you 🎶",
+            "You're the reason I wake up smiling ☀️",
+            "In your eyes, I see our entire future 👀✨",
+            "You're my favorite kind of magic 🪄",
+            "Distance means nothing when you mean everything 🌍",
+            "You're the plot twist I never saw coming 💫",
+            "My heart skips a beat every time I see you 💓",
+            "You're the answer to prayers I didn't know I was praying 🙏",
+            "With you, every day feels like Valentine's Day 💝",
+            "You're my favorite person to do nothing with 🛋️",
+            "You make me want to be the best version of myself 🌱",
+            "You're the reason I believe in soulmates 👫",
+            "Every moment without you feels incomplete 🧩",
+            "You're my favorite adventure 🗺️",
+            "In a room full of people, I'd still choose you 💕",
+            "You're the sweetest dream I never want to wake up from 😴",
+            "Forever isn't long enough with you 💍"
+        ];
+
+        // Show random secret message
+        function showSecretMessage() {
+            const randomIndex = Math.floor(Math.random() * secretMessages.length);
+            const message = secretMessages[randomIndex];
+            
+            // Create a special modal for secret messages
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.8); display: flex; align-items: center;
+                justify-content: center; z-index: 10000; animation: fadeInUp 0.5s ease-out;
+            `;
+            
+            const content = document.createElement('div');
+            content.style.cssText = `
+                background: linear-gradient(135deg, #ffeef8, #f0e6ff);
+                padding: 40px; border-radius: 20px; text-align: center;
+                max-width: 500px; margin: 20px; border: 3px solid #ff69b4;
+                box-shadow: 0 20px 40px rgba(255, 105, 180, 0.3);
+            `;
+            
+            content.innerHTML = `
+                <div style="font-size: 3rem; margin-bottom: 20px; animation: heartbeat 2s infinite;">💖</div>
+                <h3 style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: #d63384; margin-bottom: 20px;">Secret Love Note</h3>
+                <p style="font-size: 1.2rem; color: #6f42c1; line-height: 1.6; margin-bottom: 30px; font-style: italic;">${message}</p>
+                <button onclick="closeSecretModal()" style="padding: 15px 30px; border: none; border-radius: 25px; background: linear-gradient(45deg, #ff69b4, #d63384); color: white; cursor: pointer; font-size: 1rem;">Close 💕</button>
+            `;
+            
+            modal.appendChild(content);
+            document.body.appendChild(modal);
+            
+            window.closeSecretModal = function() {
+                modal.style.animation = 'fadeInUp 0.5s ease-out reverse';
+                setTimeout(() => document.body.removeChild(modal), 500);
+            };
+        }
+
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Update countdown
+        function updateCountdown() {
+            const startDate = new Date('2024-10-22'); // Anniversary date
+            const now = new Date();
+            const timeDiff = now - startDate;
+            
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            
+            document.getElementById('daysCount').textContent = days;
+            document.getElementById('timeDetails').textContent = `${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+            
+            // Next anniversary countdown
+            const nextAnniversary = new Date('2026-10-22');
+            const timeToNext = nextAnniversary - now;
+            const daysToNext = Math.floor(timeToNext / (1000 * 60 * 60 * 24));
+            document.getElementById('nextAnniversary').textContent = daysToNext;
+        }
+
+        function showPicturePlaceholder(img) {
+            const pictureFrame = img.parentElement;
+            pictureFrame.innerHTML = `
+                <div class="picture-placeholder-featured">
+                    👸
+                    <small>Add DivyA's beautiful picture here!<br>Place image as: Images/divya-birthday-photo.jpg</small>
+                </div>
+                <div class="picture-overlay">
+                    <div class="picture-text">
+                        <h3>Ankit and DivyA Forever</h3>
+                        <p>The beginning of our very cute life.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            createSparkles();
+            createMagicParticles();
+            createMouseTrail();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            
+            // Animate timeline items on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.timeline-item, .photo-card, .dream-card, .future-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'all 0.6s ease-out';
+                observer.observe(item);
+            });
+
+            // Scroll to top heart visibility
+            window.addEventListener('scroll', function() {
+                const scrollTopHeart = document.getElementById('scrollTopHeart');
+                if (window.scrollY > 300) {
+                    scrollTopHeart.classList.add('visible');
+                } else {
+                    scrollTopHeart.classList.remove('visible');
+                }
+
+                // Parallax effect for sections
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.section');
+                
+                parallaxElements.forEach((element, index) => {
+                    const rate = scrolled * -0.1;
+                    element.style.transform = `translateY(${rate}px)`;
+                });
+            });
+
+            // Add gentle fade transitions between sections
+            const sections = document.querySelectorAll('.section');
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                section.style.transition = 'all 0.8s ease-out';
+                sectionObserver.observe(section);
+            });
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98ff721772c2cbb5',t:'MTc2MDcwMDQzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
