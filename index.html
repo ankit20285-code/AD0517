@@ -1181,6 +1181,10 @@
             box-shadow: 0 12px 35px rgba(214, 51, 132, 0.4);
         }
 
+        .music-btn.playing {
+            animation: heartbeat 1.2s infinite;
+        }
+
         .secret-heart {
             position: fixed;
             bottom: 20px;
@@ -1429,7 +1433,8 @@
   <div class="magic-particles-container"></div><!-- Navigation -->
   <nav class="navigation"><button class="nav-btn" onclick="scrollToSection('landing')">Home</button> <button class="nav-btn" onclick="scrollToSection('timeline')">Story</button> <button class="nav-btn" onclick="scrollToSection('gallery')">Photos</button> <button class="nav-btn" onclick="scrollToSection('dreams')">Dreams</button> <button class="nav-btn" onclick="scrollToSection('legacy')">Future</button>
   </nav><!-- Music Controls -->
-  <div class="music-controls"><button class="music-btn" onclick="toggleMusic()" id="musicBtn">🎵</button>
+  <div class="music-controls"><button class="music-btn" onclick="toggleMusic()" id="musicBtn" aria-label="Play or pause our song">🎵</button>
+   <audio id="audioPlayer" src="assets/our_song.mp3" preload="auto" loop></audio>
   </div><!-- Secret Easter Egg Heart -->
   <div class="secret-heart" onclick="showSecretMessage()" title="Click for a surprise 💕">
    💖
@@ -2418,57 +2423,61 @@ Ankit aka ULLU 🦉
             }
         }
 
-        // Music functionality
+        // ===== Music =====
+        // The song lives at assets/our_song.mp3 (see the <audio> tag above).
+        const audio = document.getElementById('audioPlayer');
+        const musicBtn = document.getElementById('musicBtn');
         let isPlaying = false;
+        let autoStartGuardUntil = 0;
+
+        audio.addEventListener('play', () => {
+            isPlaying = true;
+            musicBtn.textContent = '⏸️';
+            musicBtn.classList.add('playing');
+        });
+        audio.addEventListener('pause', () => {
+            isPlaying = false;
+            musicBtn.textContent = '🎵';
+            musicBtn.classList.remove('playing');
+        });
+        audio.addEventListener('error', () => {
+            showToast("Couldn't load the song 😢 Check that assets/our_song.mp3 exists");
+        });
+
+        // Round button: click to pause, click again to play
         function toggleMusic() {
-            const btn = document.getElementById('musicBtn');
-            if (isPlaying) {
-                btn.textContent = '🎵';
-                isPlaying = false;
-                // In a real implementation, you would pause the audio here
-            } else {
-                btn.textContent = '⏸️';
-                isPlaying = true;
-                // In a real implementation, you would play the audio here
+            if (Date.now() < autoStartGuardUntil) return;
+            if (audio.paused) audio.play().catch(() => {});
+            else audio.pause();
+        }
+
+        // "Listen to Our Song" button: always makes sure the song is playing
+        function playOurSong() {
+            if (Date.now() < autoStartGuardUntil) return;
+            if (audio.paused) audio.play().catch(() => {});
+        }
+
+        // Autoplay on open. Browsers often block sound until the visitor interacts,
+        // so if blocked, the song starts on the very first tap / click / key press.
+        function autoStartMusic() {
+            const attempt = audio.play();
+            if (attempt && attempt.catch) {
+                attempt.catch(() => {
+                    armFirstTapStart(); // silent: no message, just starts on her first interaction
+                });
             }
         }
 
-        function playOurSong() {
-            // Custom modal for song selection
-            const modal = document.createElement('div');
-            modal.style.cssText = `
-                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-                background: rgba(0,0,0,0.8); display: flex; align-items: center;
-                justify-content: center; z-index: 10000;
-            `;
-            
-            const content = document.createElement('div');
-            content.style.cssText = `
-                background: white; padding: 40px; border-radius: 20px;
-                text-align: center; max-width: 400px; margin: 20px;
-            `;
-            
-            content.innerHTML = `
-                <h3 style="font-family: 'Dancing Script', cursive; font-size: 2rem; color: #d63384; margin-bottom: 20px;">Choose Our Song 🎶</h3>
-                <p style="color: #6c757d; margin-bottom: 30px;">Select the perfect soundtrack for our love story</p>
-                <button onclick="selectSong('romantic')" style="display: block; width: 100%; margin: 10px 0; padding: 15px; border: none; border-radius: 10px; background: linear-gradient(45deg, #ff69b4, #d63384); color: white; cursor: pointer;">Romantic Instrumental 💕</button>
-                <button onclick="selectSong('our-song')" style="display: block; width: 100%; margin: 10px 0; padding: 15px; border: none; border-radius: 10px; background: linear-gradient(45deg, #6f42c1, #0d6efd); color: white; cursor: pointer;">Our Special Song 🎵</button>
-                <button onclick="closeModal()" style="display: block; width: 100%; margin: 20px 0 0 0; padding: 10px; border: 1px solid #ddd; border-radius: 10px; background: white; color: #6c757d; cursor: pointer;">Close</button>
-            `;
-            
-            modal.appendChild(content);
-            document.body.appendChild(modal);
-            
-            window.selectSong = function(type) {
-                closeModal();
-                toggleMusic();
-                // Show a toast message
-                showToast(type === 'romantic' ? 'Playing romantic instrumental 🎶' : 'Playing our special song 💕');
+        function armFirstTapStart() {
+            const events = ['pointerdown', 'pointerup', 'click', 'keydown', 'touchend'];
+            const start = () => {
+                // the same tap may land on a button, so ignore that button's click briefly
+                autoStartGuardUntil = Date.now() + 600;
+                audio.play().then(() => {
+                    events.forEach(ev => document.removeEventListener(ev, start, true));
+                }).catch(() => {});
             };
-            
-            window.closeModal = function() {
-                document.body.removeChild(modal);
-            };
+            events.forEach(ev => document.addEventListener(ev, start, true));
         }
 
         // Show toast message
@@ -2818,6 +2827,8 @@ Ankit aka ULLU 🦉
             updateCountdown();
             setInterval(updateCountdown, 1000);
             initTimelineToggle();
+            autoStartMusic();
+            window.addEventListener('load', () => { if (audio.paused) audio.play().catch(() => {}); });
             
             // Animate timeline items on scroll
             const observerOptions = {
