@@ -976,9 +976,46 @@
         }
 
         .letter-preview {
-            color: #654321;
-            font-style: italic;
-            line-height: 1.6;
+             color: #654321;
+             font-style: italic;
+             line-height: 1.6;
+             max-height: 190px;
+             overflow: hidden;
+             position: relative;
+             white-space: pre-line;
+        }
+
+        .letter-preview::after {
+             content: '';
+             position: absolute;
+             left: 0;
+             right: 0;
+             bottom: 0;
+             height: 75px;
+             background: linear-gradient(to bottom, rgba(255, 248, 220, 0), #fff8dc 78%);
+             pointer-events: none;
+        }
+
+        .letter-read-more {
+             display: block;
+             margin-top: 12px;
+             border: 0;
+             background: transparent;
+             color: #d63384;
+             font: 600 0.95rem 'Poppins', sans-serif;
+             cursor: pointer;
+             text-align: left;
+             padding: 6px 0;
+        }
+
+        .letter-read-more:hover {
+             color: #8a2be2;
+             text-decoration: underline;
+        }
+
+        .letter-envelope:focus-visible {
+             outline: 3px solid #d63384;
+             outline-offset: 4px;
         }
 
         .countdown-section {
@@ -1965,7 +2002,22 @@
      </div>
      <div class="letter-preview" id="loveLetter">
  <!-- WRITE YOUR LETTER  -->
+        DIVYAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!! 
+OCTOBER 22nd 2026!!!!!! 2 YEARS OF US TOGETHER! 
+HOLY DATE DIVYA! LEGIT THE BEST DATEE OF MY LIFEEE 
+The date when I finally confessed something soo heavy to the girl whom I really wisheddd of making my GF (WiFE) one dayy because you looked always soo cute and gorgeous. I legit had nooo idea that I would finally get to call you "mine" someday!!! There was always something about you that felt so familiar, like my heart already knew you. You always looked unavoidable yaar. You always have this vibe of someone I KNOWWW AND I WANT!. EVEN IN A CROWD OF 1000 PEOPLE! I WILL STILL FIND YOU!
+
+It all started with "Koii dikh gayi" and "AYI! Udhar mai bethungi". DAmn so blessed for everything that has happened and been happening between us thu thu thu yuck chii. I never believed whenever anyone said "First sight love" or "Ankho se pyaar hona" until I Saw you! I legit had both! "FIRST SIGHT LOVE" and your eyes DivyA!. Your eyes are so pretty and adorable and you yourself babyyy. I loveee everything about you! I loveee youu soo muchh DivyA. There's a place you hold in my heart that nobody else could ever take. I Cherish you DivyA and I swear that I WILL CHERISH YOU ALWAYS. Your always the closest to my heart and the one I will love forever. 
+
+Really really really grateful for the date and the things happened on October 22nd, 2024. Youll remain always the most special and the most adorable person for me baby. I really loveee youu a lott. And I will always doo! No matter how much older we get, or how much life changes around us, I will keep loving you. Still a lott more years of our anniversary are yet to come with excitement, enthusiasm and SURPRISES too.... 
+
+Two years together, and I still want all the tomorrows with you, DivyA. More anniversaries, more pagalpan, more memories, more moments when I look at you and wonder how I got so lucky. I don't know what every year ahead of us will look like, but I know one thing, babyyy. I will keep choosing you, again and again. Happy two years to us, my girl. I love youuu DivyA 
+Always ❤️
+
+Forever Yours
+Ankit aka ULLU 🦉
      </div>
+     <button class="letter-read-more" type="button" onclick="event.stopPropagation(); openLetter('his')">Click to Read More 💌</button>
     </div>
     <div class="letter-envelope" onclick="openLetter('hers')">
      <div class="letter-seal">
@@ -1974,9 +2026,10 @@
      <div class="letter-title">
       From Her Heart
      </div>
-     <div class="letter-preview">
-<!-- WRITE YOUR LETTER  -->
+     <div class="letter-preview" id="herLoveLetter">
+<!-- WRITE HER LETTER  -->
      </div>
+     <button class="letter-read-more" type="button" onclick="event.stopPropagation(); openLetter('hers')">Click to Read More 💌</button>
     </div>
    </div>
   </section>
@@ -2435,41 +2488,73 @@
             }, 3000);
         }
 
-        // Letter functionality
+        // Letter functionality: show the complete text written in each card.
         function openLetter(type) {
+            const sourceId = type === 'his' ? 'loveLetter' : 'herLoveLetter';
+            const source = document.getElementById(sourceId);
+            const title = type === 'his' ? 'From His Heart 💌' : 'From Her Heart 💕';
+
             const modal = document.createElement('div');
+            modal.setAttribute('role', 'dialog');
+            modal.setAttribute('aria-modal', 'true');
+            modal.setAttribute('aria-label', title);
             modal.style.cssText = `
-                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-                background: rgba(0,0,0,0.8); display: flex; align-items: center;
-                justify-content: center; z-index: 10000; padding: 20px;
+                position: fixed; inset: 0; width: 100%; height: 100%;
+                background: rgba(40, 10, 60, 0.78); backdrop-filter: blur(6px);
+                display: flex; align-items: center; justify-content: center;
+                z-index: 10000; padding: 20px; box-sizing: border-box;
             `;
-            
+
             const letter = document.createElement('div');
             letter.style.cssText = `
-                background: #fff8dc; padding: 40px; border-radius: 15px;
-                max-width: 600px; max-height: 80vh; overflow-y: auto;
-                font-family: 'Dancing Script', cursive; line-height: 1.8;
+                position: relative; background: #fff8dc; padding: 32px;
+                border-radius: 18px; width: 100%; max-width: 680px;
+                max-height: 82vh; overflow-y: auto; box-sizing: border-box;
+                font-family: 'Poppins', sans-serif; line-height: 1.85;
                 border: 2px solid #daa520;
+                box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+                color: #654321; white-space: pre-line;
             `;
-            
-            const letterContent = type === 'his' ? 
-                `<h3 style="color: #8b4513; font-size: 2rem; margin-bottom: 20px;">From His Heart 💌</h3>
-                <p style="color: #654321; font-size: 1.2rem;">Heyyy, DivyA... Its been a year together 🤭
-                    It also started from June 22nd, 2024, Didn't expect that this could get real with you. The day I saw you, You looked so pretty, so charming, your hair, your voice. You felt so comfortable. Your voice attracted me first then your eyes. Gosh, those literally kill me. I just thought that I won't have any chance but the reality today is just way above my expectation. I found such a true love that I had never imagined before that too in this generation 😭. Kitni cute ho yaar tum, I feel like tum literally heaven se aayi ho. Itni cute , itni pyari, itni attractive, itna care karne wali larki ho na tum. Seriously, blessed to have you in my life and desire soo much to to spend the rest of our lives together, I want to fulfill all your wishes and always see you smiling because thats my peace. We literally call ek dusre ko "mera", "Hubby" , "Wifey" yoo thats the something which still gives me butterflies when I actually imagine it deeply. And the couple photo together? Abhi bhi kitna jyada butterflies deta hai yaar wo photo jab bhi dekhta hu. And remember the first photo of us together? That was like a big milestone cleared for me. Subah subah uth kar sabse pahle wahi photo dekhta tha. I used to feel , how lucky I got to have her in life. I always feel it though cuz your so cuteeeeeeee. I just couldn't wait when we could officially call each other "mine" in front of the world. I love you in the ways, I never did to anyone. I feel some special energy around you, your odor, your face, your looks, your hair, your voice, your heart, your nature... Everything is such a divine that its incomparable to anyone. You are very special and the most heart melting person for me DivyA Every second with you feels like home, like I was meant to find you and never let go. You’re my peace, when I see you smile, the happiness in myself is soo true and real for you. When I look at you, I don’t just see my girlfriend , I see my forever, my future, my everything. I promise you, DivyA, no matter whatever we go through, I’ll always make you feel loved, protected, and safe like the queen you are. This is just our first year, baby. imagine how beautiful the rest of our forever is gonna be DivyA 🙃
-                    I really love you a lott DivyA, more than any words could express, I really want to express it through my actions. Because you deserve to be loved, happy and cared for. 
-                     Your mine Divine, My DivyA, My World, My Wife, My Baby, My Kuchu Puchu, My Cutie, My CuTiPie, My everything DivyA 🙃    </p>` :
-                `<h3 style="color: #8b4513; font-size: 2rem; margin-bottom: 20px;">From Her Heart 💕</h3>
-                <p style="color: #654321; font-size: 1.2rem;">I loveee youuu soo soo sooo muchhh Ankitttt❣🤧... kitneeee sweettt pyareee considerate babyy ho mereeee🫠🫠🌟 i wanna be with youuu hameshaa forever 😭❣ neverr thinkkk anything negativeee about yourself!  😭 u r theee mostttt special and precious person to me cutuuuuu! Myyy hubbbyyyy😭❣😌 and I am soo soo sooo Proud of youuu and US darling ❤ 
-                Mela Ankitttt! I lovee so sooo muchhhhhh🙈❣ more than words could ever expressss😘</p>`;
-            
-            letter.innerHTML = letterContent + `<button onclick="closeLetterModal()" style="margin-top: 30px; padding: 15px 30px; border: none; border-radius: 25px; background: linear-gradient(45deg, #ff69b4, #d63384); color: white; cursor: pointer; font-size: 1rem;">Close Letter 💌</button>`;
-            
+
+            const heading = document.createElement('h3');
+            heading.textContent = title;
+            heading.style.cssText = `
+                color: #8b4513; font-family: 'Dancing Script', cursive;
+                font-size: 2.2rem; margin: 0 0 18px;
+            `;
+
+            const content = document.createElement('div');
+            content.textContent = source ? source.innerText.trim() : '';
+            content.style.cssText = `font-size: 1rem; overflow-wrap: anywhere;`;
+
+            const close = document.createElement('button');
+            close.type = 'button';
+            close.textContent = 'Close Letter 💌';
+            close.style.cssText = `
+                display: block; margin: 26px auto 0; padding: 13px 28px;
+                border: none; border-radius: 25px;
+                background: linear-gradient(45deg, #ff69b4, #d63384);
+                color: white; cursor: pointer; font-size: 1rem;
+            `;
+
+            function closeModal() {
+                document.removeEventListener('keydown', onKeyDown);
+                modal.remove();
+            }
+            function onKeyDown(event) {
+                if (event.key === 'Escape') closeModal();
+            }
+
+            close.addEventListener('click', closeModal);
+            modal.addEventListener('click', event => {
+                if (event.target === modal) closeModal();
+            });
+            document.addEventListener('keydown', onKeyDown);
+
+            letter.append(heading, content, close);
             modal.appendChild(letter);
             document.body.appendChild(modal);
-            
-            window.closeLetterModal = function() {
-                document.body.removeChild(modal);
-            };
+            close.focus();
         }
 
         // Dream details
